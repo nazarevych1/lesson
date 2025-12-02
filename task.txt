@@ -1,0 +1,35 @@
+Task:
+Backtesting on XAUUSD (from 2020 to 2025)
+
+
+Looking at 1hour timeframe:
+
+upper_wick_length = high - max(open, close)
+lower_wick_length = min(open, close) - low
+body = abs(close - open)
+
+Entry rules (bullish):
+1. lower_wick_length >= self.WICK_RATIO * body and
+2. close > open_ and
+3. upper_wick_length * self.OP_WICK_RATIO <= lower_wick_length
+
+stop_loss = low
+take_profit = close + (close - low) * self.RR
+
+
+Entry rules (bearish):
+1. upper_wick_length >= self.WICK_RATIO * body and
+2. close < open_ and
+3. lower_wick_length * self.OP_WICK_RATIO <= upper_wick_length
+
+stop_loss = high
+take_profit = close - (high - close) * self.RR
+
+
+Plan:
+1. Import and Check Historical Data.
+2. Plan config.
+3. Poetry env.
+4. Development in .ipynb environment with testing.
+5. Testing.
+6. Refactoring and creating entry point script.
