@@ -30,7 +30,7 @@ print(months)
 data_df = None
 
 for month in tqdm(months):
-    url = f"https://api.insightsentry.com/v3/symbols/OANDA:XAUUSD/history?bar_interval=1&bar_type=hour&extended=false&badj=false&dadj=false&start_ym={month}"
+    url = f"https://api.insightsentry.com/v3/symbols/OANDA:XAUUSD/history?bar_interval=1&bar_type=minute&extended=false&badj=false&dadj=false&start_ym={month}"
 
     headers = {
         "Authorization": f"Bearer {os.getenv('IS_JWT')}",
@@ -65,4 +65,4 @@ data_df = data_df.set_index("Time")
 data_df.index = pd.to_datetime(data_df.index)
 
 
-data_df.to_csv("XAAUSD_1hour.csv")
+data_df.to_csv("XAAUSD_1min.csv")

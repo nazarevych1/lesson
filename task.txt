@@ -33,3 +33,8 @@ Plan:
 4. Development in .ipynb environment with testing.
 5. Testing.
 6. Refactoring and creating entry point script.
+
+
+1. 1min timeframe
+2. Trading time window.
+3. Refactoring, summary files.
