@@ -1,0 +1,33 @@
+DATA_FP: '../data/XAUUSD_1hour.csv'
+DATA_TF: '1hour'
+
+DATA_1MIN_FP: '../data/XAUUSD_1min.csv'
+
+
+FEES: 0.0004
+SLIPPAGE: 0
+
+SIZE: 1
+SIZE_TYPE: 'percent'
+
+INIT_BALANCE: 10000
+
+BACKTESTING_DATES:
+  START: '2025-01-01'
+  END: '2025-12-01'
+
+WICK_RATIO: 
+  START: 1
+  END: 2
+  STEP: 0.2
+
+OP_WICK_RATIO: 
+  START: 1
+  END: 2
+  STEP: 0.2
+
+RR: 4
+
+TRADING_TIME:
+  START: '05:00'
+  END: '20:59'
